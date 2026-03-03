@@ -41,5 +41,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          push: truetags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKERHUB_PROJECT_NAME }}:latest
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKERHUB_PROJECT_NAME }}:latest
 
