@@ -37,7 +37,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Setup Docker Bildx
+      - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
           
       - name: Build and push Docker image
@@ -45,5 +45,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_PROJECT_NAME }}:latest
+          tags: ${{ secrets.DOCKERHUB_PROJECT_NAME }}:latest
 
